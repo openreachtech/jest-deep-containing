@@ -1,0 +1,14 @@
+{
+  "name": "@openreachtech/jest-deep-containing",
+  "version": "0.0.0",
+  "description": "The Jest extension that applies `expect.objectContaining()` recursively.",
+  "files": [
+    "lib/"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Open Reach Tech inc.",
+  "license": "MIT"
+}
