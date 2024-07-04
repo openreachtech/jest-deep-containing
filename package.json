@@ -15,6 +15,10 @@
   "license": "MIT",
   "devDependencies": {
     "@openreachtech/eslint-config": "^3.0.2",
-    "eslint": "^9.6.0"
+    "@openreachtech/jest-constructor-spy": "^1.1.0",
+    "@openreachtech/renchan-test-tools": "^1.0.0",
+    "@types/jest": "^29.5.12",
+    "eslint": "^9.6.0",
+    "jest": "^29.7.0"
   }
 }
