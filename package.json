@@ -7,8 +7,14 @@
   ],
   "main": "index.js",
   "scripts": {
+    "l": "npm run lint",
+    "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Open Reach Tech inc.",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@openreachtech/eslint-config": "^3.0.2",
+    "eslint": "^9.6.0"
+  }
 }
