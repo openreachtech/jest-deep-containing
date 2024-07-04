@@ -15,4 +15,10 @@ module.exports = [
   },
 
   ...configurations,
+
+  {
+    rules: {
+      'jest/no-deprecated-functions': 'off',
+    },
+  },
 ]
