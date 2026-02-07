@@ -11,7 +11,7 @@
     "lint": "eslint .",
     "test": "export NODE_ENV=development; jest --forceExit --maxWorkers=5"
   },
-  "author": "Open Reach Tech inc.",
+  "author": "Open Reach Tech Inc.",
   "license": "MIT",
   "devDependencies": {
     "@openreachtech/eslint-config": "^3.0.2",
