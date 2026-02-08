@@ -5,6 +5,7 @@
   "files": [
     "lib/"
   ],
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "l": "npm run lint",
