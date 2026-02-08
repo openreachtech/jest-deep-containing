@@ -1,6 +1,26 @@
-import configurations from '@openreachtech/eslint-config'
+import {
+  default as openreachtechConfig,
+  // coreRuleOptionHash,
+} from '@openreachtech/eslint-config'
 
 export default [
+  ...openreachtechConfig,
+
+  {
+    ignores: [
+      './playground/**',
+    ],
+  },
+
+  {
+    files: [
+      'tests/**/*.js',
+    ],
+    rules: {
+      'max-classes-per-file': 'off',
+    },
+  },
+
   /*
    * If ignores is used without any other keys in the configuration object, then the patterns act as global ignores. Here’s an example:
    *
@@ -11,8 +31,6 @@ export default [
       'index.mjs',
     ],
   },
-
-  ...configurations,
 
   {
     languageOptions: {

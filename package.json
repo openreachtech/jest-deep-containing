@@ -15,7 +15,7 @@
   "author": "Open Reach Tech Inc.",
   "license": "MIT",
   "devDependencies": {
-    "@openreachtech/eslint-config": "^3.0.2",
+    "@openreachtech/eslint-config": "^4.3.0",
     "@openreachtech/jest-constructor-spy": "^1.1.0",
     "@openreachtech/renchan-test-tools": "^1.0.0",
     "@types/jest": "^30.0.0",
