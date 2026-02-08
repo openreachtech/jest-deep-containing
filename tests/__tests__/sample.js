@@ -1,5 +1,3 @@
-'use strict'
-
 describe('Sample', () => {
   test('addition', () => {
     expect(1 + 2)
