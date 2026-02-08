@@ -1,3 +1,5 @@
+import Sample from '../Sample.js'
+
 describe('Sample', () => {
   test('addition', () => {
     expect(1 + 2)
@@ -28,5 +30,12 @@ describe('Sample', () => {
       .toEqual(
         expect.deepContaining(expected)
       )
+  })
+})
+
+describe('Sample', () => {
+  test('is defined', () => {
+    expect(Sample)
+      .toBeDefined()
   })
 })
