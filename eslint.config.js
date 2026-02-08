@@ -15,6 +15,12 @@ export default [
   ...configurations,
 
   {
+    languageOptions: {
+      sourceType: 'module',
+    },
+  },
+
+  {
     rules: {
       'jest/no-deprecated-functions': 'off',
     },
