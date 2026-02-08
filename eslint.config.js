@@ -43,4 +43,13 @@ export default [
       'jest/no-deprecated-functions': 'off',
     },
   },
+
+  {
+    files: [
+      'tests/**',
+    ],
+    rules: {
+      'no-undefined': 'off',
+    },
+  },
 ]
