@@ -14,6 +14,9 @@
   },
   "author": "Open Reach Tech Inc.",
   "license": "MIT",
+  "dependencies": {
+    "@openreachtech/mentsu-gene-chain-splicer": "^1.0.0"
+  },
   "devDependencies": {
     "@openreachtech/eslint-config": "^4.3.0",
     "@openreachtech/jest-constructor-spy": "^1.1.0",
