@@ -1,14 +1,14 @@
-import {
-  ExpectMixins,
-} from '@openreachtech/renchan-test-tools/lib/types'
-
-interface EnhancedExpect<R = unknown>
-  extends
-    ExpectMixins<R>
-{}
+export interface DeepContainingExpectMixin<R = unknown> {
+  deepContaining(
+    received: any,
+    options?: {
+      convertsArray?: boolean,
+    }
+  ): jasmine.ObjectContaining | jasmine.ArrayContaining | any
+}
 
 declare global {
   namespace jest {
-    interface Expect extends EnhancedExpect {}
+    interface Expect extends DeepContainingExpectMixin {}
   }
 }
