@@ -1,5 +1,5 @@
 describe('expect.deepContaining()', () => {
-  describe('with convertsArray: false', () => {
+  describe('with skipsArray: false', () => {
     /**
      * @type {Array<{
      *   input: {
@@ -161,7 +161,7 @@ describe('expect.deepContaining()', () => {
         input: {
           expectedCore: {
             alpha: 3000,
-            beta: [ // fixed order, when convertsArray is false
+            beta: [ // fixed order, when skipsArray is false
               'first',
               'second',
               'third',
@@ -390,10 +390,10 @@ describe('expect.deepContaining()', () => {
           })
         })
 
-        describe('with convertsArray: false', () => {
+        describe('with skipsArray: false', () => {
           test.each(truthyCases)('received: $received', ({ received }) => {
             const expected = expect.deepContaining(input.expectedCore, {
-              convertsArray: false,
+              skipsArray: false,
             })
 
             expect(received)
@@ -413,10 +413,10 @@ describe('expect.deepContaining()', () => {
           })
         })
 
-        describe('with convertsArray: false', () => {
+        describe('with skipsArray: false', () => {
           test.each(falsyCases)('received: $received', ({ received }) => {
             const expected = expect.deepContaining(input.expectedCore, {
-              convertsArray: false,
+              skipsArray: false,
             })
 
             expect(received)
@@ -428,7 +428,7 @@ describe('expect.deepContaining()', () => {
     })
   })
 
-  describe('with convertsArray: true', () => {
+  describe('with skipsArray: true', () => {
     /**
      * @type {Array<{
      *   input: {
@@ -590,7 +590,7 @@ describe('expect.deepContaining()', () => {
         input: {
           expectedCore: {
             alpha: 3000,
-            beta: [ // fixed order, when convertsArray is false
+            beta: [ // fixed order, when skipsArray is false
               'first',
               'second',
               'third',
@@ -852,7 +852,7 @@ describe('expect.deepContaining()', () => {
       describe('truthy cases', () => {
         test.each(truthyCases)('received: $received', ({ received }) => {
           const expected = expect.deepContaining(input.expectedCore, {
-            convertsArray: true,
+            skipsArray: true,
           })
 
           expect(received)
@@ -863,7 +863,7 @@ describe('expect.deepContaining()', () => {
       describe('falsy cases', () => {
         test.each(falsyCases)('received: $received', ({ received }) => {
           const expected = expect.deepContaining(input.expectedCore, {
-            convertsArray: true,
+            skipsArray: true,
           })
 
           expect(received)

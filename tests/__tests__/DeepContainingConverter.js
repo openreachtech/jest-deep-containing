@@ -14,14 +14,14 @@ describe('DeepContainingConverter', () => {
             name: 'actual expect',
             input: {
               rawExpect: expect,
-              convertsArray: false,
+              skipsArray: false,
             },
           },
           {
             name: 'mock expect',
             input: {
               rawExpect: mockExpect,
-              convertsArray: true,
+              skipsArray: true,
             },
           },
         ]
@@ -34,27 +34,27 @@ describe('DeepContainingConverter', () => {
         })
       })
 
-      describe('#convertsArray', () => {
+      describe('#skipsArray', () => {
         const cases = [
           {
             input: {
               rawExpect: expect,
-              convertsArray: false,
+              skipsArray: false,
             },
           },
           {
             input: {
               rawExpect: expect,
-              convertsArray: true,
+              skipsArray: true,
             },
           },
         ]
 
-        test.each(cases)('convertsArray: $input.convertsArray', ({ input }) => {
+        test.each(cases)('skipsArray: $input.skipsArray', ({ input }) => {
           const converter = new DeepContainingConverter(input)
 
           expect(converter)
-            .toHaveProperty('convertsArray', input.convertsArray)
+            .toHaveProperty('skipsArray', input.skipsArray)
         })
       })
     })
@@ -75,14 +75,14 @@ describe('DeepContainingConverter', () => {
             name: 'actual expect',
             input: {
               rawExpect: expect,
-              convertsArray: true,
+              skipsArray: true,
             },
           },
           {
             name: 'mock expect',
             input: {
               rawExpect: mockExpect,
-              convertsArray: false,
+              skipsArray: false,
             },
           },
         ]
@@ -98,24 +98,24 @@ describe('DeepContainingConverter', () => {
       describe('with lacked arguments', () => {
         const cases = [
           {
-            name: 'without convertsArray',
+            name: 'without skipsArray',
             input: {
               rawExpect: expect,
-              // convertsArray: false,
+              // skipsArray: false,
             },
           },
           {
             name: 'without expect',
             input: {
               // rawExpect: expect,
-              convertsArray: false,
+              skipsArray: false,
             },
           },
           {
             name: 'without any arguments',
             input: {
               // rawExpect: expect,
-              // convertsArray: false,
+              // skipsArray: false,
             },
           },
         ]
@@ -136,22 +136,22 @@ describe('DeepContainingConverter', () => {
             name: 'actual expect',
             input: {
               rawExpect: expect,
-              convertsArray: true,
+              skipsArray: true,
             },
             expected: {
               rawExpect: expect,
-              convertsArray: true,
+              skipsArray: true,
             },
           },
           {
             name: 'mock expect',
             input: {
               rawExpect: mockExpect,
-              convertsArray: false,
+              skipsArray: false,
             },
             expected: {
               rawExpect: mockExpect,
-              convertsArray: false,
+              skipsArray: false,
             },
           },
         ]
@@ -169,36 +169,36 @@ describe('DeepContainingConverter', () => {
       describe('with lacked arguments', () => {
         const cases = [
           {
-            name: 'without convertsArray',
+            name: 'without skipsArray',
             input: {
               rawExpect: expect,
-              // convertsArray: false,
+              // skipsArray: false,
             },
             expected: {
               rawExpect: expect,
-              convertsArray: false,
+              skipsArray: false,
             },
           },
           {
             name: 'without rawExpect',
             input: {
               // rawExpect: expect,
-              convertsArray: true,
+              skipsArray: true,
             },
             expected: {
               rawExpect: expect,
-              convertsArray: true,
+              skipsArray: true,
             },
           },
           {
             name: 'without any arguments',
             input: {
               // rawExpect: expect,
-              // convertsArray: false,
+              // skipsArray: false,
             },
             expected: {
               rawExpect: expect,
-              convertsArray: false,
+              skipsArray: false,
             },
           },
         ]
@@ -313,18 +313,18 @@ describe('DeepContainingConverter', () => {
       {
         input: {
           rawExpect: expect,
-          convertsArray: false,
+          skipsArray: false,
         },
       },
       {
         input: {
           rawExpect: expect,
-          convertsArray: true,
+          skipsArray: true,
         },
       },
     ]
 
-    test.each(cases)('convertsArray: $input.convertsArray', ({ input }) => {
+    test.each(cases)('skipsArray: $input.skipsArray', ({ input }) => {
       const converter = new DeepContainingConverter(input)
 
       const received = converter.Ctor
@@ -1343,7 +1343,7 @@ describe('DeepContainingConverter', () => {
           const arrayContainingSpy = jest.spyOn(expect, 'arrayContaining')
           const converter = DeepContainingConverter.create({
             rawExpect: expect,
-            convertsArray: true, // ✅️
+            skipsArray: true, // ✅️
           })
 
           converter.deepConvert(input)
@@ -1413,12 +1413,12 @@ describe('DeepContainingConverter', () => {
           },
         ]
 
-        describe('on covertsArray: true', () => {
+        describe('on skipsArray: true', () => {
           test.each(cases)('$input.value', ({ input, expected }) => {
             const arrayContainingSpy = jest.spyOn(expect, 'arrayContaining')
             const converter = DeepContainingConverter.create({
               rawExpect: expect,
-              convertsArray: true, // ✅️
+              skipsArray: true, // ✅️
             })
 
             converter.deepConvert(input)
@@ -1430,12 +1430,12 @@ describe('DeepContainingConverter', () => {
           })
         })
 
-        describe('on covertsArray: false', () => {
+        describe('on skipsArray: false', () => {
           test.each(cases)('$input.value', ({ input, expected }) => {
             const arrayContainingSpy = jest.spyOn(expect, 'arrayContaining')
             const converter = DeepContainingConverter.create({
               rawExpect: expect,
-              convertsArray: false, // ✅️
+              skipsArray: false, // ✅️
             })
 
             converter.deepConvert(input)
@@ -1510,12 +1510,12 @@ describe('DeepContainingConverter', () => {
           },
         ]
 
-        describe('on covertsArray: true', () => {
+        describe('on skipsArray: true', () => {
           test.each(cases)('value: $input.value', ({ input, expectedWith }) => {
             const arrayContainingSpy = jest.spyOn(expect, 'arrayContaining')
             const converter = DeepContainingConverter.create({
               rawExpect: expect,
-              convertsArray: true, // ✅️
+              skipsArray: true, // ✅️
             })
 
             converter.deepConvert(input)
@@ -1535,12 +1535,12 @@ describe('DeepContainingConverter', () => {
           })
         })
 
-        describe('on covertsArray: false', () => {
+        describe('on skipsArray: false', () => {
           test.each(cases)('value: $input.value', ({ input, expectedWith }) => {
             const arrayContainingSpy = jest.spyOn(expect, 'arrayContaining')
             const converter = DeepContainingConverter.create({
               rawExpect: expect,
-              convertsArray: false, // ✅️
+              skipsArray: false, // ✅️
             })
 
             converter.deepConvert(input)
@@ -1647,12 +1647,12 @@ describe('DeepContainingConverter', () => {
           },
         ]
 
-        describe('on covertsArray: true', () => {
+        describe('on skipsArray: true', () => {
           test.each(cases)('value: $input.value', ({ input, expectedWith }) => {
             const arrayContainingSpy = jest.spyOn(expect, 'arrayContaining')
             const converter = DeepContainingConverter.create({
               rawExpect: expect,
-              convertsArray: true, // ✅️
+              skipsArray: true, // ✅️
             })
 
             converter.deepConvert(input)
@@ -1677,12 +1677,12 @@ describe('DeepContainingConverter', () => {
           })
         })
 
-        describe('on covertsArray: false', () => {
+        describe('on skipsArray: false', () => {
           test.each(cases)('value: $input.value', ({ input, expectedWith }) => {
             const arrayContainingSpy = jest.spyOn(expect, 'arrayContaining')
             const converter = DeepContainingConverter.create({
               rawExpect: expect,
-              convertsArray: false, // ✅️
+              skipsArray: false, // ✅️
             })
 
             converter.deepConvert(input)
