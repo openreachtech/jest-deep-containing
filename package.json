@@ -17,6 +17,10 @@
     "type": "git",
     "url": "git+https://github.com/openreachtech/jest-deep-containing.git"
   },
+  "keywords": [
+    "Jest",
+    "DeepContaining"
+  ],
   "author": "Open Reach Tech Inc.",
   "license": "MIT",
   "dependencies": {
