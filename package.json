@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "description": "The Jest extension that applies `expect.objectContaining()` recursively.",
   "files": [
-    "lib/"
+    "lib/",
+    "types/"
   ],
   "type": "module",
   "main": "index.js",
