@@ -26,6 +26,7 @@
   "bugs": {
     "url": "https://github.com/openreachtech/jest-deep-containing/issues"
   },
+  "homepage": "https://github.com/openreachtech/jest-deep-containing#readme",
   "dependencies": {
     "@openreachtech/mentsu-gene-chain-splicer": "^1.0.0"
   },
