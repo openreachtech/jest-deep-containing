@@ -2,7 +2,7 @@ export interface DeepContainingExpectMixin<R = unknown> {
   deepContaining(
     received: any,
     options?: {
-      convertsArray?: boolean,
+      skipsArray?: boolean,
     }
   ): jasmine.ObjectContaining | jasmine.ArrayContaining | any
 }
