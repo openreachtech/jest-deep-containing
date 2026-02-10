@@ -1413,12 +1413,12 @@ describe('DeepContainingConverter', () => {
           },
         ]
 
-        describe('on skipsArray: true', () => {
+        describe('on skipsArray: false', () => {
           test.each(cases)('$input.value', ({ input, expected }) => {
             const arrayContainingSpy = jest.spyOn(expect, 'arrayContaining')
             const converter = DeepContainingConverter.create({
               rawExpect: expect,
-              skipsArray: true, // ✅️
+              skipsArray: false, // ✅️
             })
 
             converter.deepConvert(input)
@@ -1430,12 +1430,12 @@ describe('DeepContainingConverter', () => {
           })
         })
 
-        describe('on skipsArray: false', () => {
+        describe('on skipsArray: true', () => {
           test.each(cases)('$input.value', ({ input, expected }) => {
             const arrayContainingSpy = jest.spyOn(expect, 'arrayContaining')
             const converter = DeepContainingConverter.create({
               rawExpect: expect,
-              skipsArray: false, // ✅️
+              skipsArray: true, // ✅️
             })
 
             converter.deepConvert(input)
@@ -1510,12 +1510,12 @@ describe('DeepContainingConverter', () => {
           },
         ]
 
-        describe('on skipsArray: true', () => {
+        describe('on skipsArray: false', () => {
           test.each(cases)('value: $input.value', ({ input, expectedWith }) => {
             const arrayContainingSpy = jest.spyOn(expect, 'arrayContaining')
             const converter = DeepContainingConverter.create({
               rawExpect: expect,
-              skipsArray: true, // ✅️
+              skipsArray: false, // ✅️
             })
 
             converter.deepConvert(input)
@@ -1535,12 +1535,12 @@ describe('DeepContainingConverter', () => {
           })
         })
 
-        describe('on skipsArray: false', () => {
+        describe('on skipsArray: true', () => {
           test.each(cases)('value: $input.value', ({ input, expectedWith }) => {
             const arrayContainingSpy = jest.spyOn(expect, 'arrayContaining')
             const converter = DeepContainingConverter.create({
               rawExpect: expect,
-              skipsArray: false, // ✅️
+              skipsArray: true, // ✅️
             })
 
             converter.deepConvert(input)
@@ -1647,12 +1647,12 @@ describe('DeepContainingConverter', () => {
           },
         ]
 
-        describe('on skipsArray: true', () => {
+        describe('on skipsArray: false', () => {
           test.each(cases)('value: $input.value', ({ input, expectedWith }) => {
             const arrayContainingSpy = jest.spyOn(expect, 'arrayContaining')
             const converter = DeepContainingConverter.create({
               rawExpect: expect,
-              skipsArray: true, // ✅️
+              skipsArray: false, // ✅️
             })
 
             converter.deepConvert(input)
@@ -1677,12 +1677,12 @@ describe('DeepContainingConverter', () => {
           })
         })
 
-        describe('on skipsArray: false', () => {
+        describe('on skipsArray: true', () => {
           test.each(cases)('value: $input.value', ({ input, expectedWith }) => {
             const arrayContainingSpy = jest.spyOn(expect, 'arrayContaining')
             const converter = DeepContainingConverter.create({
               rawExpect: expect,
-              skipsArray: false, // ✅️
+              skipsArray: true, // ✅️
             })
 
             converter.deepConvert(input)
