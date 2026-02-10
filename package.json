@@ -13,8 +13,20 @@
     "lint": "eslint .",
     "test": "export NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\"; export NODE_ENV=development; jest --maxWorkers=5"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openreachtech/jest-deep-containing.git"
+  },
+  "keywords": [
+    "Jest",
+    "DeepContaining"
+  ],
   "author": "Open Reach Tech Inc.",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/openreachtech/jest-deep-containing/issues"
+  },
+  "homepage": "https://github.com/openreachtech/jest-deep-containing#readme",
   "dependencies": {
     "@openreachtech/mentsu-gene-chain-splicer": "^1.0.0"
   },
