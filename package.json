@@ -23,6 +23,9 @@
   ],
   "author": "Open Reach Tech Inc.",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/openreachtech/jest-deep-containing/issues"
+  },
   "dependencies": {
     "@openreachtech/mentsu-gene-chain-splicer": "^1.0.0"
   },
