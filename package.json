@@ -1,24 +1,29 @@
 {
   "name": "@openreachtech/jest-deep-containing",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "The Jest extension that applies `expect.objectContaining()` recursively.",
   "files": [
-    "lib/"
+    "lib/",
+    "types/"
   ],
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "l": "npm run lint",
     "lint": "eslint .",
-    "test": "export NODE_ENV=development; jest --forceExit --maxWorkers=5"
+    "test": "export NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\"; export NODE_ENV=development; jest --maxWorkers=5"
   },
-  "author": "Open Reach Tech inc.",
+  "author": "Open Reach Tech Inc.",
   "license": "MIT",
+  "dependencies": {
+    "@openreachtech/mentsu-gene-chain-splicer": "^1.0.0"
+  },
   "devDependencies": {
-    "@openreachtech/eslint-config": "^3.0.2",
+    "@openreachtech/eslint-config": "^4.3.0",
     "@openreachtech/jest-constructor-spy": "^1.1.0",
     "@openreachtech/renchan-test-tools": "^1.0.0",
-    "@types/jest": "^29.5.12",
-    "eslint": "^9.6.0",
-    "jest": "^29.7.0"
+    "@types/jest": "^30.0.0",
+    "eslint": "^9.39.2",
+    "jest": "^30.2.0"
   }
 }

@@ -1,4 +1,4 @@
-'use strict'
+import Sample from '../Sample.js'
 
 describe('Sample', () => {
   test('addition', () => {
@@ -30,5 +30,12 @@ describe('Sample', () => {
       .toEqual(
         expect.deepContaining(expected)
       )
+  })
+})
+
+describe('Sample', () => {
+  test('is defined', () => {
+    expect(Sample)
+      .toBeDefined()
   })
 })
