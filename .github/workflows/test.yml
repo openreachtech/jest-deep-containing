@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   test:
-    runs-on: [self-hosted, light]
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
