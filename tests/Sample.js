@@ -1,3 +1,8 @@
 export default class Sample {
-  // noop
+  /**
+   * Constructor for own class
+   */
+  constructor () {
+    this.value = null
+  }
 }
