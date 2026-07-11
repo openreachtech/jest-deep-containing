@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/openreachtech/jest-deep-containing#readme",
   "dependencies": {
-    "@openreachtech/mentsu-gene-chain-splicer": "^1.0.0"
+    "@openreachtech/mentsu-gene-chain-splicer": "^1.0.1"
   },
   "devDependencies": {
     "@openreachtech/eslint-config": "^4.3.0",
