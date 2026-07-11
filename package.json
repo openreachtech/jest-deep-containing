@@ -1,6 +1,6 @@
 {
   "name": "@openreachtech/jest-deep-containing",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The Jest extension that applies `expect.objectContaining()` recursively.",
   "files": [
     "lib/",
