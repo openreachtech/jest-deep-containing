@@ -10,14 +10,6 @@ A Jest matcher extension that provides deep object and array matching with `expe
 - npm >= 10.0.0
 - ESM (ECMAScript Modules) only
 
-## Setting up `.npmrc`
-
-This package is published to GitHub Packages. Create a `.npmrc` file in your project root:
-
-```plaintext
-@openreachtech:registry=https://npm.pkg.github.com
-```
-
 ## Install
 
 ```bash
