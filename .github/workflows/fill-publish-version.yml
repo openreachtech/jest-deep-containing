@@ -22,6 +22,8 @@ jobs:
     # public repository: github-hosted
     runs-on: ${{ fromJSON(github.event.repository.private && '["self-hosted", "light"]' || '["ubuntu-latest"]') }}
 
+    timeout-minutes: 5
+
     steps:
       - name: 🤖 Replace vvvvvv with the version in the title
         env:
