@@ -32,7 +32,11 @@ jobs:
       - name: 🏗 Use Node.js
         uses: actions/setup-node@v7
         with:
-          cache: 'npm'
+          # ⚠️ The npm cache only pays off where ~/.npm is discarded between jobs.
+          # On a persistent [self-hosted] runner it re-ships what is already on disk,
+          # adding a measured 2.7 GB and ~2m30s to this step so that the next one,
+          # npm ci, can finish in 5s instead of 7s.
+          cache: ${{ runner.environment == 'github-hosted' && 'npm' || '' }}
           package-manager-cache: false
           # A floating LTS alias keeps every repository current without a scheduled
           # sweep to bump a pinned major across all of them. Pin a concrete version
