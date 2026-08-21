@@ -43,6 +43,15 @@ jobs:
           # here only in a repository that genuinely needs one.
           node-version: lts/*
 
+      - name: 🖨️ Print environment
+        env:
+          RUNNER_ENVIRONMENT: ${{ runner.environment }}
+        run: |
+          echo
+          echo "runner: $RUNNER_ENVIRONMENT"
+          echo "node  : $(node -v)"
+          echo "npm   : $(npm -v)"
+
       - name: 📦 Install packages
         run: npm ci
 
